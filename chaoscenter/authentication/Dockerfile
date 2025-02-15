@@ -1,13 +1,13 @@
 # BUILD STAGE
 FROM golang:1.22 AS builder
 
-ARG TARGETOS=linux
+ARG TARGETOSlinux
 ARG TARGETARCH
 
 ADD . /auth-server
 WORKDIR /auth-server
 
-ENV GOOS=${TARGETOS} \
+EN GOOS=${TARGETOS} \
     GOARCH=${TARGETARCH}
 
 RUN go env
